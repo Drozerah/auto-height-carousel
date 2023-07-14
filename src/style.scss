@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap");
+:root {
+  --white: #FFFFFF;
+  --black: #333333;
+  --blue-lighten: aliceblue;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  background-color: white;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: 'Shippori Mincho', serif;
+  color: var(--black);
+  background: var(--white);
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+/* 
+* Carousel
+*/
+.carousel:not(:hover)::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel:not(:hover) {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.carousel {
+  height: 0px;
+  width: 80%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  gap: 15px;
+  transition: height .4s ease-out;
+  cursor: pointer;
+}
+
+.carousel .item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  user-select: none;
+}
+
+.carousel .item .item__body{
+  min-width: 300px;
+  background-color: #E7E7E7;
+  border-radius: 5px;
+  margin: 0px 0px 15px 0px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  padding: 20px;
+}
+
+.carousel .item:nth-child(even) .item__body {
+  background-color: #f2f2f2;
+}
+
+.carousel .item div {
+  text-align: center;
+}
+
+footer {
+  margin-bottom:  20px;
+}
