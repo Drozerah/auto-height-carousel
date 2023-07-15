@@ -1,8 +1,7 @@
 import './scss/style.scss'
-import { AutoHeightCarousel as myCarousel } from '../lib/AutoHeightCarousel.js'
+import { AutoHeightCarousel } from '../lib/AutoHeightCarousel.js'
 
-let carousel = document.querySelector('#carousel') as HTMLElement
-new myCarousel(carousel)
+const carousel:AutoHeightCarousel = new AutoHeightCarousel(document.querySelector('#carousel') as HTMLElement)
+carousel
   .setItemsMarginBottom(8)
   .init()
-  
