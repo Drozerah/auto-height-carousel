@@ -40,9 +40,9 @@ class AutoHeightCarousel  {
   }
 
   init() {
-    this.getItemsVisibilty()
-    this.carousel.addEventListener('scroll', () => this.getItemsVisibilty())
+    window.addEventListener('load', () => this.getItemsVisibilty())
     window.addEventListener('resize', () => this.getItemsVisibilty())
+    this.carousel.addEventListener('scroll', () => this.getItemsVisibilty())
     return this
   }
 }
