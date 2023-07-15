@@ -1,3 +1,6 @@
+/**
+ * Class AutoHeightCarousel
+ */
 class AutoHeightCarousel  {
 
   carousel: HTMLElement
@@ -9,7 +12,12 @@ class AutoHeightCarousel  {
     this.items = this.carousel.querySelectorAll('.item')
     this.offset = 20
   }
-
+  /**
+   * Set Carousel items margin bottom
+   * 
+   * - will add an offset heigth to the carousel height itself
+   * @param {string} value default is 20px
+   */
   setItemsMarginBottom(value: number = this.offset) {
     this.offset = value
     return this
@@ -38,7 +46,9 @@ class AutoHeightCarousel  {
     })
     this.setCarouselHeight()
   }
-
+  /**
+   * Init AutoHeightCarousel
+   */
   init() {
     window.addEventListener('load', () => this.getItemsVisibilty())
     window.addEventListener('resize', () => this.getItemsVisibilty())
