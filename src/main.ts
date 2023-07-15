@@ -1,4 +1,4 @@
-import './style.scss'
+import './scss/style.scss'
 import { AutoHeightCarousel as myCarousel } from '../lib/AutoHeightCarousel.js'
 
 let carousel = document.querySelector('#carousel') as HTMLElement

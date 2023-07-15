@@ -1,0 +1,45 @@
+//  CAROUSEL
+// ---------------------------------------------------------------------------------
+.carousel {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 15px;
+  height: 0px;
+  width: 80%;
+  min-width: 300px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  cursor: pointer;
+  transition: height .4s ease-out;
+  &:not(:hover) {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  &:not(:hover)::-webkit-scrollbar {
+    display: none;
+  }
+  .item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    user-select: none;
+    &:nth-child(even){
+      .item__body {
+        background-color: var(--grey); //var;
+      }
+    }
+    &__body{
+      min-width: 300px;
+      background-color: var(--grey-lighten); //var
+      border-radius: 5px;
+      margin: 0px 0px 15px 0px;
+      box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+      padding: 20px;
+    }
+    div {
+      text-align: center;
+    }
+  }
+}
