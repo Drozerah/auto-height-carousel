@@ -13,12 +13,16 @@ config()
 // })
 
 export default defineConfig(({ command }) => {
-  server: {
-    port: process.env.PORT || 3000
-  }
+
   if (command === 'build') {
     return {
       base: './'
+    }
+  } else {
+    return {
+      server: {
+        port: process.env.PORT || 3000
+      }
     }
   }
 })
