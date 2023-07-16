@@ -16,7 +16,7 @@ class AutoHeightCarousel  {
    * Set Carousel items margin bottom
    * 
    * - will add an offset heigth to the carousel height itself
-   * @param {string} value default is 20px
+   * @param {number} value default is 20px
    */
   setItemsMarginBottom(value: number = this.offset) {
     this.offset = value
