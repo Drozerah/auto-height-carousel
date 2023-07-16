@@ -4,15 +4,19 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite  --host",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "cypress:open": "npm run build && cypress open",
+    "cypress:run": "npm run build && cypress run"
   },
   "devDependencies": {
+    "cypress": "^12.17.1",
     "typescript": "^5.0.2",
     "vite": "^4.4.0"
   },
   "dependencies": {
+    "dotenv": "^16.3.1",
     "sass": "^1.63.6"
   }
 }
